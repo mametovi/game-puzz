@@ -1,32 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="app">
+    <img class="logo" alt="Vue logo" src="./assets/logo.png">
+    
+    <h1 class="h1">Remember Me, Vue 3</h1>
+    <p>Запомни и открой все зеленые клетки</p>
+    
+    <Board />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Board from './components/Board';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components: {
+    Board,
   }
 }
+</script>
+
+<style scoped>
+  .app {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .logo {
+    width: 100px;
+  }
 </style>
